@@ -27,12 +27,33 @@ Route::get('/test', function () {
 
 Route::get("/gatehouse/give_key", [
     'uses' => 'Gatehouse\GatehouseController@give_key',
-    'as' => 'gatehouse_give_key'
+    'as' => 'gatehouse.give_key'
 ]);
 
-Route::get("/gatehouse/give_key_handler", 'Gatehouse\GatehouseController@give_key_handler');
+Route::post("/gatehouse/give_key", [
+    'uses' =>  'Gatehouse\GatehouseController@give_key',
+    'as' => 'gatehouse.give_key'
+]);
 
-Route::post("/gatehouse/give_key_handler", [
-    'uses' =>  'Gatehouse\GatehouseController@give_key_handler',
-    'as' => 'gatehouse.give_key_handler'
+Route::get("/gatehouse/return_key", [
+    'uses' => 'Gatehouse\GatehouseController@return_key',
+    'as' => 'gatehouse.return_key'
+]);
+
+Route::post("/gatehouse/return_key", [
+    'uses' =>  'Gatehouse\GatehouseController@return_key',
+    'as' => 'gatehouse.return_key'
+]);
+
+Route::get("/gatehouse/test", [
+    'uses' => 'Gatehouse\GatehouseController@test',
+    'as' => 'gatehouse.test'
+]);
+Route::get("/gatehouse/new_employee", [
+    'uses' => 'Gatehouse\GatehouseController@new_employee',
+    'as' => 'gatehouse.new_employee'
+]);
+Route::post("/gatehouse/new_employee", [
+    'uses' => 'Gatehouse\GatehouseController@new_employee',
+    'as' => 'gatehouse.new_employee'
 ]);

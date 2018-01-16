@@ -1,0 +1,6 @@
+1. Użytkownik chce wybrać klucz do danej sali, który jest dostępny
+    - operacja powinna zakończyć się sukcesem
+
+2. Użytkownik chce wybrać klucz do danej sali, który został wcześniej pobrany
+    - operacja powinna zwrócić komunikat o błędzie
+

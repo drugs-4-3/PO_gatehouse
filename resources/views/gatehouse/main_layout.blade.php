@@ -27,6 +27,7 @@
 
     <div class="my-class">
         @section("content")
+            <h1><strong>System zarządzania kluczami PWr</strong></h1>
         @show
     </div>
 
